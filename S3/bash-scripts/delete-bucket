@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-echo "== sync"
+echo "== delete bucket"
 
 set -e
 
@@ -11,5 +11,5 @@ fi
 
 BUCKET_NAME=$1
 
-aws s3api delete-buckets --bucket $BUCKET_NAME \
+aws s3api delete-buckets --bucket $BUCKET_NAME
 
