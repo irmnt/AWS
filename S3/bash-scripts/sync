@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+echo "== sync"
+
+# Check if at least one argument is provided
+if [ -z "$1" ]; then
+    echo "There needs to be a bucket name eg. ./bucket my-bucket-name"
+    exit 1
+fi

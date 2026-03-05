@@ -1,0 +1,5 @@
+#! /usr/local/bin/bash
+echo "== sync newest bucket"
+
+aws s3 ls
+aws s3api list-bucket | jq -r '.Buckets | sort_by(.CreationDate) | reverse | .[0:5] | .[] | .Name'
