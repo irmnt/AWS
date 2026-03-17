@@ -5,7 +5,7 @@ aws s3 mb s3://metadata-fun-ik-0317
 
 ### create a new file
 ```sh
-echo "Hello Mars" > hello.tx
+echo "Hello Mars" > hello.txt
 ```
 
 ## Upload file with metadata

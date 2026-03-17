@@ -1,0 +1,9 @@
+services: {}
+
+tasks:
+  configure-aws-prompt:
+    name: Set AWS CLI auto-prompt
+    description: Enables partial auto-prompt mode for the AWS CLI in the current session
+    command: export AWS_CLI_AUTO_PROMPT=on-partial
+    triggeredBy:
+      - postDevcontainerStart
