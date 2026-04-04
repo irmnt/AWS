@@ -1,7 +1,7 @@
 {
     "CORSRules": [
         {
-            "AllowedOrigins": ["https://1kccnjkm43.execute-api.ca-central-1.amazonaws.com"],
+            "AllowedOrigins": ["https://ulkb9w6vtg.execute-api.ca-central-1.amazonaws.com"],
             "AllowedHeaders": ["*"],
             "AllowedMethods": ["PUT","POST","DELETE"],
             "MaxAgeSeconds": 3000,
