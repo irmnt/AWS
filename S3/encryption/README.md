@@ -21,8 +21,11 @@ aws s3api put-object \
 
 ### Put Object with SSE-C [Failed Attempt]
 ```sh
-export BASE64_ENCODED_KEY=$(openssl rand -base64 32)
-echo $BASE64_ENCODED_KEY
+# Exporting the key into BASED64_ENCODED_KEY increases its size of data more than 256 bytes, and AWS CLI rejects the key
+# ---> exporting the key into a file and set it as 'fileb://' is the best practice
+
+# export BASE64_ENCODED_KEY=$(openssl rand -base64 32)
+# echo $BASE64_ENCODED_KEY
 
 openssl rand -out ssec.key 32
 
@@ -32,4 +35,12 @@ aws s3api put-object \
 --body hello.txt \
 --sse-customer-algorithm AES256 \
 --sse-customer-key fileb://ssec.key
+```
+
+### Upload it back without encryption flags
+```sh 
+aws s3api put-object \
+--bucket encryption-fun-ik-0407 \
+--key hello.txt \
+--body hello.txt
 ```
